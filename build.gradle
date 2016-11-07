@@ -24,7 +24,6 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-
 release {
     failOnCommitNeeded = true
     failOnPublishNeeded = true
@@ -53,4 +52,12 @@ release {
         pushToBranchPrefix = ''
         commitVersionFileOnly = false
     }
+}
+
+afterReleaseBuild {
+    dependsOn uploadArchives
+}
+
+uploadArchives {
+    println "After release build intercepted"
 }
