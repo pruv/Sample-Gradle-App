@@ -13,7 +13,6 @@ repositories {
 
 
 group 'com.company.sample.gradle'
-version '1.0-SNAPSHOT'
 
 task wrapper(type: Wrapper) {
   gradleVersion = '2.13'
