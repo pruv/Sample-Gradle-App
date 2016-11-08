@@ -60,4 +60,6 @@ afterReleaseBuild {
 
 uploadArchives {
     println "After release build intercepted"
+    println "${System.properties['aUserName']}"
+    println "${System.properties['aPassword']}"
 }
